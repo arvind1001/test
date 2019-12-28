@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Card List
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card class="welcome-card" *ngFor="let item of showCard">
+    <ion-img src="/assets/shapes.svg"></ion-img>
+    <ion-card-header>
+      <ion-card-subtitle>{{item.Category}}</ion-card-subtitle>
+      <ion-card-title>{{item.API}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{item.Description}}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

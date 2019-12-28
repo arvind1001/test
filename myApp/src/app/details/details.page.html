@@ -1,0 +1,22 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start" style="color:#fff">
+          <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>Details</ion-title>
+      </ion-toolbar>
+</ion-header>
+
+<ion-content>
+        <ion-card class="welcome-card">
+          <img src="/assets/shapes.svg" alt="" />
+          <ion-card-header>
+            <ion-card-subtitle>{{this.singleData.Category}}</ion-card-subtitle>
+            <ion-card-title>{{this.singleData.API}}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>{{this.singleData.Description}}</p>
+          </ion-card-content>
+        </ion-card>
+</ion-content>
+

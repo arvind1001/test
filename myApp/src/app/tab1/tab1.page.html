@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      All List
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-toolbar>
+  <ion-searchbar animated [(ngModel)]="search"  (ionChange)="setFilteredItems(searchTerm)"></ion-searchbar>
+</ion-toolbar>
+<ion-content>
+    <ion-list>
+      <ion-item *ngFor="let item of showList" (click)="goDetails(item)">
+        <ion-thumbnail slot="start">
+          <ion-img src="/assets/shapes.svg"></ion-img>
+          <!-- <img src="/assets/shapes.svg" alt="" /> -->
+        </ion-thumbnail>
+        <ion-label>{{item?.API}}</ion-label>
+      </ion-item>
+    </ion-list>
+    <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+      <ion-infinite-scroll-content
+        loadingSpinner="bubbles"
+        loadingText="Loading more data...">
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+</ion-content>
